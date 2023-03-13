@@ -6,12 +6,13 @@ using TMPro;
 public class Dialogue : MonoBehaviour
 {
     
-    public TestMeshProUGUI textDisplay
+    public TextMeshProUGUI textDisplay;
     public string[] sentences;
     private int index; 
     public float typingSpeed;
 
     void start(){
+
     StartCoroutine(Type());
     }
     
@@ -22,4 +23,16 @@ public class Dialogue : MonoBehaviour
         yield return new WaitForSeconds(0.02f);
     }
 
+public void NextSentence(){
+    if (index < sentences.Length -1){
+        index++;
+        textDisplay.text = " ";
+        StartCoroutine(Type());
+    } else {
+        textDisplay = " ";
+    }
+
+    }
 }
+
+
