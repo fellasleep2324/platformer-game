@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LightBanditHealthBar : MonoBehaviour
 {
+    public Animator animator;
     public int maxHealth = 2;
     public int currentHealth;
 
@@ -19,10 +20,26 @@ public class LightBanditHealthBar : MonoBehaviour
     {
 
     }
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+
+        animator.SetTrigger("Hurt");
+
+        if(currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("Enemy died");
+        animator.SetBool("IsDie", true);
+
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
     }
 }
