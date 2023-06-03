@@ -16,6 +16,7 @@ public class PlayerCombat : MonoBehaviour
     float nextAttackTime = 0;
     void Update()
     {
+        
         if (Time.time >= nextAttackTime)
         {
             if (Input.GetMouseButtonDown(0))
@@ -29,6 +30,7 @@ public class PlayerCombat : MonoBehaviour
     void Attack()
     {
         animator.SetTrigger("Attack");
+
 
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, enemyLayers);
 
@@ -44,4 +46,12 @@ public class PlayerCombat : MonoBehaviour
 
         Gizmos.DrawWireSphere(AttackPoint.position, attackRange);
     }
+
+    
+
+
+    
+
+
+
 }
