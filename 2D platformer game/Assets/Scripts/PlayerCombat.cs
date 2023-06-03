@@ -6,14 +6,19 @@ public class PlayerCombat : MonoBehaviour
 {
 
     public Animator animator;
+    public PlayerMovement playerMovement;
+    
 
-    public Transform AttackPoint;
+    public Transform attackpoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-
+    
     public int attackDamage = 1;
-    public float attackRate = 2f;
+    public float attackRate = 1f;
     float nextAttackTime = 0;
+   
+   
+
     void Update()
     {
         
@@ -27,12 +32,21 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void Attack()
+        
+
+     void Attack()
     {
-        animator.SetTrigger("Attack");
+        
+       /* if(animator.IsJumping && !Attack2)
+        {
+            animator.SetTrigger("Attack2");
+        }
+    */
 
+        animator.SetTrigger("Attack1");
+        
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(AttackPoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, enemyLayers);
 
         foreach (Collider2D enemy in hitEnemies)
         {
@@ -41,10 +55,10 @@ public class PlayerCombat : MonoBehaviour
     }
     void OnDrawGizmosSelected()
     {
-        if (AttackPoint == null)
+        if (attackpoint == null)
             return;
 
-        Gizmos.DrawWireSphere(AttackPoint.position, attackRange);
+        Gizmos.DrawWireSphere(attackpoint.position, attackRange);
     }
 
     

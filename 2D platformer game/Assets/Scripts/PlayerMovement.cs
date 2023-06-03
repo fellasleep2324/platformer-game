@@ -5,12 +5,16 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public CharacterController2D controller;
-    public Animator animator; 
+    public Animator animator;
+    public PlayerCombat combat;
 
     public void OnLanding ()
     {
         animator.SetBool("IsJumping",false);
-    
+        animator.ResetTrigger("Attack1");
+        animator.ResetTrigger("Attack2");
+        
+        
      }
     
 
