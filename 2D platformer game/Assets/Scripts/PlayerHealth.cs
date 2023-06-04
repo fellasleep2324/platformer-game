@@ -23,25 +23,12 @@ public class PlayerHealth : MonoBehaviour
 
         healthBar.SetHealth(currentHealth);
     
-    void Update() 
-    {
-    {
-    
+ 
      if(currentHealth == 0)
      {
         animator.SetTrigger("Death");
      }
      
     }
-    }
-    
-   
-    
-    
-    
-    
 }
-    
    
-
-}

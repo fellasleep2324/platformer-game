@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Control : MonoBehaviour
 {
     public GameObject Canvas;
+    public GameObject MainGame;
     void Start()
     {
         
@@ -16,16 +17,11 @@ public class Control : MonoBehaviour
     {
         
     }
-    
+
     public void whenButtonClicked()
     {
-        if (Canvas.activeInHierarchy == true)
-            Canvas.SetActive(false);
-        else
-            Canvas.SetActive(true);
-    }    
-    public void ResetTheGame()
-    {
+        Canvas.SetActive(false);
+        MainGame.SetActive(true);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void MainMenu()
