@@ -21,6 +21,10 @@ public class LightBandit1Move : MonoBehaviour
         {
             animator.SetTrigger("Attack");
         }
+            if(Vector2.Distance(Target.position, transform.position) > chaseDistance)
+            {
+                isChasing = false;
+            }
          if(isChasing)
         {
             moveSpeed = 3f;
