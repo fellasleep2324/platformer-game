@@ -9,11 +9,44 @@ public class LightBandit1Move : MonoBehaviour
     public int patrolDestination;
     public Animator animator;
 
+    public Transform Target;
+    public bool isChasing; 
+    public float chaseDistance;
+    
+
 
     // Update is called once per frame
     void Update()
     {
-        if(patrolDestination == 0)
+        if(isChasing)
+        {
+            moveSpeed = 4f;
+            if(transform.position.x > Target.position.x)
+            {
+                transform.localScale = new Vector3(1,1,1);
+                transform.position += Vector3.left * moveSpeed *Time.deltaTime;
+            }
+             if(transform.position.x < Target.position.x)
+            {
+                transform.localScale = new Vector3(-1,1,1);
+                transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+            }
+        }
+
+        else
+        {
+            if(Target.position.x > patrolPoints[0].position.x)
+            {
+
+                if(Vector2.Distance(transform.position, Target.position) < chaseDistance)
+                {
+                    isChasing = true;
+                }
+            }
+        else
+        {
+            moveSpeed = 2f;
+           if(patrolDestination == 0)
         {
             transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
             animator.SetFloat("Speed", moveSpeed);
@@ -33,7 +66,17 @@ public class LightBandit1Move : MonoBehaviour
                 transform.localScale = new Vector3(1, 1, 1);
                 patrolDestination = 0;
             }
+        } 
         }
+        }
+        
+        
+        
+        
+        
+        
+        
+        
     }
 }
 
