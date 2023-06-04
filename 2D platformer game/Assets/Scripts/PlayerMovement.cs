@@ -7,6 +7,12 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController2D controller;
     public Animator animator;
     public PlayerCombat combat;
+    public float KBforce;
+    public float KBcounter; 
+    public float Totaltime; 
+    public Rigidbody2D playerRb;
+
+    public bool KnockfromRight; 
 
     public void OnLanding ()
     {
@@ -47,9 +53,27 @@ animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
     void FixedUpdate()
 
     {
-        // Move your charracter
-        controller.Move(horizontalMove * Time.fixedDeltaTime,jump);
-        jump = false;
+        if(KBcounter <= 0)
+        {  
+            // Move your charracter
+           controller.Move(horizontalMove * Time.fixedDeltaTime,jump);
+        jump = false; 
+        }
+    
+        else 
+        {
+            if(KnockfromRight)
+            {
+                playerRb.velocity = new Vector2(-KBforce, KBforce);
+            }
+            if(KnockfromRight == false)
+            {
+                playerRb.velocity = new Vector2 (KBforce, KBforce); 
+            }
+            KBcounter -=Time.deltaTime;
+        }
+      
+        
     }
 
     

@@ -871,6 +871,11 @@ MonoBehaviour:
   controller: {fileID: 485160285}
   animator: {fileID: 485160289}
   combat: {fileID: 485160290}
+  KBforce: 2
+  KBcounter: 0.2
+  Totaltime: 0
+  playerRb: {fileID: 485160284}
+  KnockfromRight: 0
   runSpeed: 40
 --- !u!212 &485160287
 SpriteRenderer:
@@ -2586,11 +2591,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 70
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 60
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2614,7 +2619,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.57, y: -4.9900413, z: -10}
+  m_LocalPosition: {x: -13.57, y: -7.24, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
