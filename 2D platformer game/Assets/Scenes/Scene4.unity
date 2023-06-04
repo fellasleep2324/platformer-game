@@ -357,6 +357,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 333208026}
+  animator: {fileID: 0}
+  combat: {fileID: 0}
   runSpeed: 40
 --- !u!58 &333208023
 CircleCollider2D:
@@ -434,7 +436,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_JumpForce: 700
-  m_CrouchSpeed: 0.4
   m_MovementSmoothing: 0.05
   m_AirControl: 1
   m_WhatIsGround:
@@ -442,11 +443,7 @@ MonoBehaviour:
     m_Bits: 1
   m_GroundCheck: {fileID: 286257369}
   m_CeilingCheck: {fileID: 1012054153}
-  m_CrouchDisableCollider: {fileID: 333208024}
   OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!95 &333208027
