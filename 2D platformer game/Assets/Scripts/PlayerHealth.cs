@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
-{
+{   public Animator animator;
     public int maxHealth = 5;
     public int currentHealth;
+    
 
     public HealthBar healthBar;
     void Start()
@@ -15,15 +16,32 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    
-    void Update()
-    {
-        
-    }
     void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        animator.SetTrigger("Ouch");
 
         healthBar.SetHealth(currentHealth);
+    
+    void Update() 
+    {
+    {
+    
+     if(currentHealth == 0)
+     {
+        animator.SetTrigger("Death");
+     }
+     
     }
+    }
+    
+   
+    
+    
+    
+    
+}
+    
+   
+
 }
