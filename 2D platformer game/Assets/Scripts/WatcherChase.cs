@@ -10,6 +10,7 @@ public Transform Target;
 public bool isChasing;
 public Transform Begin;
 public float attackRange;
+public Transform Slow;
 
 void Start() 
 {
@@ -37,6 +38,9 @@ void Update()
         }
 
     }
-        
+        if(Target.position.x > Slow.position.x)
+        {
+            moveSpeed = moveSpeed/2;
+        }
     }
 }
