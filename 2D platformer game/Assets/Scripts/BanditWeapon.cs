@@ -16,7 +16,7 @@ public class BanditWeapon : MonoBehaviour
         foreach(Collider2D player in hitPlayer)
         {
             Debug.Log("playerhasbeenhit");
-            player.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
+         player.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
         }
     }
 
