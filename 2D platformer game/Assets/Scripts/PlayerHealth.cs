@@ -24,11 +24,17 @@ public class PlayerHealth : MonoBehaviour
 
         animator.SetTrigger("Ouch");
 
-     if(currentHealth <= 0)
-     {
-        animator.SetTrigger("Death");
-     }
-     
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
     }
+    void Die()
+        {
+            animator.SetBool("IsDie", true);
+
+            GetComponent<Collider2D>().enabled = false;
+            this.enabled = false;
+        }
 }
    
