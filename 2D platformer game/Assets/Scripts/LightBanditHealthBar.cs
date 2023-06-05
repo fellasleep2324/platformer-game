@@ -7,6 +7,7 @@ public class LightBanditHealthBar : MonoBehaviour
     public Animator animator;
     public int maxHealth = 2;
     public int currentHealth;
+    public GameObject Bandit;
 
     public HealthBar healthBar;
     void Start()
@@ -18,7 +19,7 @@ public class LightBanditHealthBar : MonoBehaviour
 
     void Update()
     {
-
+    
     }
     public void TakeDamage(int damage)
     {
@@ -36,7 +37,6 @@ public class LightBanditHealthBar : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Enemy died");
         animator.SetBool("IsDie", true);
 
         GetComponent<Collider2D>().enabled = false;

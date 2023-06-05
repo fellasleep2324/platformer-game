@@ -9,7 +9,7 @@ public class PlayerCombat : MonoBehaviour
     public PlayerMovement playerMovement;
     
 
-    public Transform attackpoint;
+    public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
     
@@ -46,19 +46,20 @@ public class PlayerCombat : MonoBehaviour
         animator.SetTrigger("Attack1");
         
 
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, enemyLayers);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        foreach (Collider2D enemy in hitEnemies)
+        foreach(Collider2D enemy in hitEnemies)
         {
+            Debug.Log("targetbeenhit");
             enemy.GetComponent<LightBanditHealthBar>().TakeDamage(attackDamage);
         }
     }
     void OnDrawGizmosSelected()
     {
-        if (attackpoint == null)
+        if (attackPoint == null)
             return;
 
-        Gizmos.DrawWireSphere(attackpoint.position, attackRange);
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
     

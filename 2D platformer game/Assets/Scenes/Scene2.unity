@@ -4829,6 +4829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcc3d097115531f4dbd7d1c0d7bb2468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Canvas: {fileID: 0}
+  MainGame: {fileID: 0}
 --- !u!1 &679708551
 GameObject:
   m_ObjectHideFlags: 0
@@ -6401,7 +6403,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 3
   m_WholeNumbers: 0
-  m_Value: 2
+  m_Value: 3
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -8546,7 +8548,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1199343075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8640,7 +8642,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1215265426}
   playerMovement: {fileID: 1215265431}
-  attackpoint: {fileID: 1673890990}
+  attackPoint: {fileID: 0}
   attackRange: 0.4
   enemyLayers:
     serializedVersion: 2
