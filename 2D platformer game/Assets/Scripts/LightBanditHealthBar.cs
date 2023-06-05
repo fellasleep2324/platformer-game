@@ -27,7 +27,7 @@ public class LightBanditHealthBar : MonoBehaviour
 
         healthBar.SetHealth(currentHealth);
 
-        animator.SetTrigger("Hurt");
+        animator.SetTrigger("Ouch");
 
         if(currentHealth <= 0)
         {
@@ -42,4 +42,6 @@ public class LightBanditHealthBar : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
     }
+
+    
 }

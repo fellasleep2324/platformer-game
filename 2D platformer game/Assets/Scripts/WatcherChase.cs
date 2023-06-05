@@ -9,11 +9,10 @@ public Animator animator;
 public Transform Target;
 public bool isChasing;
 public Transform Begin;
-public bool Collapse;
+public float attackRange;
 
 void Start() 
 {
- Collapse = false;
  isChasing = false;    
 }
 
@@ -22,13 +21,20 @@ void Update()
     {
         if(Target.position.y > Begin.position.y)
         {
-            Collapse = true;
             isChasing = true; 
         }
 
     if(isChasing)
     {
-        Vector2.MoveTowards(transform.position, Target.position, moveSpeed*Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, Target.position, moveSpeed*Time.deltaTime);
+        if(Target.position.x < attackRange)
+        {
+            animator.SetTrigger("Attack");
+            if(animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+            {
+                //cause lethal damage
+            }
+        }
 
     }
         
