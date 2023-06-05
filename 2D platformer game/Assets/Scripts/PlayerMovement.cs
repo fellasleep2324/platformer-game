@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     public void OnLanding ()
     {
         animator.SetBool("IsJumping",false);
+        Debug.Log("TouchingEarth");
         animator.ResetTrigger("Attack1");
         animator.ResetTrigger("Attack2");
         
