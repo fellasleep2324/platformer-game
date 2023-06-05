@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1214,7 +1214,7 @@ MonoBehaviour:
   animator: {fileID: 485160289}
   playerMovement: {fileID: 485160286}
   attackPoint: {fileID: 938038859}
-  attackRange: 0.5
+  attackRange: 1.2
   enemyLayers:
     serializedVersion: 2
     m_Bits: 512
@@ -4072,6 +4072,7 @@ MonoBehaviour:
   Target: {fileID: 485160288}
   isChasing: 0
   chaseDistance: 2
+  health: {fileID: 1528598428}
 --- !u!95 &1528598427
 Animator:
   serializedVersion: 5

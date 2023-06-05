@@ -11,18 +11,18 @@ public class LightBandit1Move : MonoBehaviour
     public Transform Target;
     public bool isChasing; 
     public float chaseDistance;
-    public LightBanditHealthBar healthManager;
+    public LightBanditHealthBar health;
     
 
 
     // Update is called once per frame
     void Update()
     {
-        
-        if(currentHealth = 0)
+        if(health.currentHealth == 0)
         {
             return;
         }
+    
         if(Vector2.Distance(Target.position,transform.position) <3f)
         {
             animator.SetTrigger("Attack");
