@@ -15,12 +15,6 @@ public class LightBanditHealthBar : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
-
-
-    void Update()
-    {
-    
-    }
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;

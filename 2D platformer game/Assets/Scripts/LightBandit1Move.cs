@@ -15,7 +15,10 @@ public class LightBandit1Move : MonoBehaviour
     
 
 
+
+
     // Update is called once per frame
+
     void Update()
     {
         if(health.currentHealth == 0)
@@ -26,6 +29,7 @@ public class LightBandit1Move : MonoBehaviour
         if(Vector2.Distance(Target.position,transform.position) <3f)
         {
             animator.SetTrigger("Attack");
+
         }
             if(Vector2.Distance(Target.position, transform.position) > chaseDistance)
             {

@@ -50,7 +50,6 @@ public class PlayerCombat : MonoBehaviour
 
         foreach(Collider2D enemy in hitEnemies)
         {
-            Debug.Log("targetbeenhit");
             enemy.GetComponent<LightBanditHealthBar>().TakeDamage(attackDamage);
         }
     }
