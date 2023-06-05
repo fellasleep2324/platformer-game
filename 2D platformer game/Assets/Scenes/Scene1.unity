@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 34359623}
   - component: {fileID: 34359625}
   - component: {fileID: 34359624}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: RedFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +824,7 @@ GameObject:
   - component: {fileID: 453012496}
   - component: {fileID: 453012498}
   - component: {fileID: 453012497}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,12 +973,12 @@ GameObject:
   - component: {fileID: 485160288}
   - component: {fileID: 485160287}
   - component: {fileID: 485160289}
-  - component: {fileID: 485160291}
   - component: {fileID: 485160286}
   - component: {fileID: 485160285}
   - component: {fileID: 485160284}
   - component: {fileID: 485160282}
   - component: {fileID: 485160290}
+  - component: {fileID: 485160291}
   m_Layer: 10
   m_Name: player
   m_TagString: Player
@@ -1201,12 +1201,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 485160281}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42477fe32b087b740a6e5d764b9e7fd6, type: 3}
+  m_Script: {fileID: 11500000, guid: c80a42dea98a8ec429d1c9b0894ed1fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 485160289}
   maxHealth: 5
-  currentHealth: 0
   healthBar: {fileID: 1714110162}
 --- !u!1 &486669689
 GameObject:
@@ -3135,7 +3134,7 @@ GameObject:
   - component: {fileID: 1191286600}
   - component: {fileID: 1191286599}
   - component: {fileID: 1191286598}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3235,7 +3234,7 @@ GameObject:
   - component: {fileID: 1195165424}
   - component: {fileID: 1195165426}
   - component: {fileID: 1195165425}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4165,10 +4164,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 853002640}
-  attackRange: 0.5
   playerLayers:
     serializedVersion: 2
     m_Bits: 1024
+  attackRange: 0.5
   attackDamage: 1
 --- !u!1 &1560855408
 GameObject:
@@ -4748,7 +4747,7 @@ GameObject:
   - component: {fileID: 1714110161}
   - component: {fileID: 1714110163}
   - component: {fileID: 1714110162}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -6,8 +6,9 @@ public class BanditWeapon : MonoBehaviour
 { 
 
     public Transform attackPoint;
-    public float attackRange = 0.5f;
     public LayerMask playerLayers;
+
+    public float attackRange = 0.5f;
     public int attackDamage = 1;
     public void BanditAttack()
     {
@@ -16,7 +17,7 @@ public class BanditWeapon : MonoBehaviour
         foreach(Collider2D player in hitPlayer)
         {
             Debug.Log("playerhasbeenhit");
-            player.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
+            player.GetComponent<playerHealth1>().TakeDamage(attackDamage);
         }
     }
 

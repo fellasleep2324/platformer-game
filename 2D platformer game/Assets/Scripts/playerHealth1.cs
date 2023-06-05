@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
-{   
+public class playerHealth1 : MonoBehaviour
+{
     public Animator animator;
     public int maxHealth = 5;
-    public int currentHealth;
-    
+    int currentHealth;
+
     public HealthBar healthBar;
     void Start()
     {
@@ -30,11 +29,10 @@ public class PlayerHealth : MonoBehaviour
         }
     }
     void Die()
-        {
-            animator.SetBool("IsDie", true);
+    {
+        animator.SetBool("IsDie", true);
 
-            GetComponent<Collider2D>().enabled = false;
-            this.enabled = false;
-        }
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
+    }
 }
-   
