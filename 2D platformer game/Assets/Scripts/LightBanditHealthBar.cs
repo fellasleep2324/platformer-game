@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LightBanditHealthBar : MonoBehaviour
 {
     public Animator animator;
     public int maxHealth = 2;
     public int currentHealth;
-    public GameObject Bandit;
 
     public HealthBar healthBar;
     void Start()
@@ -15,6 +15,7 @@ public class LightBanditHealthBar : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -30,12 +31,10 @@ public class LightBanditHealthBar : MonoBehaviour
     }
 
     void Die()
-    {
-        animator.SetBool("IsDie", true);
+        {
+            animator.SetBool("IsDie", true);
 
-        GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
-    }
-
-    
+            GetComponent<Collider2D>().enabled = false;
+            this.enabled = false;
+        }
 }
