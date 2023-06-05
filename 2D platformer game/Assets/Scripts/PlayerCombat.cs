@@ -56,8 +56,7 @@ public class PlayerCombat : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
-            return;
-
+         return; 
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 

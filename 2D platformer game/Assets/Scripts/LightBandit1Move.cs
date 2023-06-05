@@ -12,13 +12,21 @@ public class LightBandit1Move : MonoBehaviour
     public bool isChasing; 
     public float chaseDistance;
     public LightBanditHealthBar health;
-    
 
 
 
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask playerLayers;
+    public int attackDamage = 1;
 
     // Update is called once per frame
-
+    void OnDrawGizmosSelected() 
+    { 
+        if(attackPoint == null)
+            return; 
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange); 
+    }
     void Update()
     {
         if(health.currentHealth == 0)
@@ -29,6 +37,14 @@ public class LightBandit1Move : MonoBehaviour
         if(Vector2.Distance(Target.position,transform.position) <3f)
         {
             animator.SetTrigger("Attack");
+
+            Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
+
+            foreach(Collider2D player in hitPlayer)
+            { 
+             Debug.Log("playerhasbeenhit"); 
+             player.GetComponent<PlayerHealth>().TakeDamage(attackDamage); 
+            }
 
         }
             if(Vector2.Distance(Target.position, transform.position) > chaseDistance)
