@@ -8,6 +8,8 @@ public class playerHealth1 : MonoBehaviour
     public Animator animator;
     public int maxHealth = 5;
     public int currentHealth;
+    public GameObject Canvas;
+    public GameObject MainGame;
 
     public HealthBar healthBar;
     void Start()
@@ -35,5 +37,11 @@ public class playerHealth1 : MonoBehaviour
 
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
+
+    }
+    public void DeathTransition()
+    {
+        Canvas.SetActive(true);
+        MainGame.SetActive(false);
     }
 }
