@@ -37,12 +37,12 @@ public class Mushroom : MonoBehaviour
             moveSpeed = 1f;
             if(transform.position.x > Target.position.x)
             {
-                transform.localScale = new Vector3(-3f,3f,1);
+                transform.localScale = new Vector3(-5f,5f,1);
                 transform.position += Vector3.left * moveSpeed*Time.deltaTime;
             }
              if(transform.position.x < Target.position.x)
             {
-                transform.localScale = new Vector3(3f,3f,1);
+                transform.localScale = new Vector3(5f,5f,1);
                 transform.position += Vector3.right*moveSpeed*Time.deltaTime;
             }
         }
@@ -62,7 +62,7 @@ public class Mushroom : MonoBehaviour
             { 
                 patrolDestination = 1;
                 animator.SetFloat("Speed", moveSpeed);
-                transform.localScale = new Vector3(3f,3f, 1);
+                transform.localScale = new Vector3(5f,5f, 1);
                 
             }
         }
@@ -74,7 +74,7 @@ public class Mushroom : MonoBehaviour
             {   
                 patrolDestination = 0;
                 animator.SetFloat("Speed", moveSpeed);
-                transform.localScale = new Vector3(-3f, 3f, 1);
+                transform.localScale = new Vector3(-5f, 5f, 1);
             }
         }
         }

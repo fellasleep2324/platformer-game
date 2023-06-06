@@ -9565,8 +9565,8 @@ MonoBehaviour:
   animator: {fileID: 1290192563}
   maxHealth: 5
   currentHealth: 0
-  Canvas: {fileID: 0}
-  MainGame: {fileID: 0}
+  Canvas: {fileID: 1903944517}
+  MainGame: {fileID: 367530296}
   healthBar: {fileID: 1273929927}
 --- !u!114 &1290192565
 MonoBehaviour:
