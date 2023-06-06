@@ -5,7 +5,7 @@ using UnityEngine;
 public class HeavyBanditHealthBar : MonoBehaviour
 {
     public Animator animator;
-    public int maxHealth = 6;
+    public int maxHealth = 4;
     public int currentHealth;
 
     public HealthBar healthBar;

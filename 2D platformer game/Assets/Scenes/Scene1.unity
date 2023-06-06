@@ -1446,6 +1446,7 @@ MonoBehaviour:
   KBcounter: 0.2
   Totaltime: 0
   playerRb: {fileID: 485160284}
+  health1: {fileID: 0}
   KnockfromRight: 0
   runSpeed: 40
 --- !u!212 &485160287

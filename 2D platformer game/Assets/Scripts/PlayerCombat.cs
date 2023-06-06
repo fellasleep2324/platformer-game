@@ -31,28 +31,32 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
-     void Attack()
+    void Attack()
     {
         animator.SetTrigger("Attack1");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
-        foreach(Collider2D enemy in hitEnemies)
+        foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<LightBanditHealthBar>().TakeDamage(attackDamage);
+            Debug.Assert(enemy != null, enemy);
+            LightBanditHealthBar lightbanditHealth = enemy.GetComponent<LightBanditHealthBar>();
+
+            if (!lightbanditHealth)
+
+            {
+                Debug.LogError("Collider does not have EnemyHealth component. " + enemy.name, enemy);
+            }
+            else
+            {
+                lightbanditHealth.TakeDamage(attackDamage);
+            }
         }
     }
-    void OnDrawGizmosSelected()
+
+    private void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
-         return; 
+            return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
-
-    
-
-
-    
-
-
-
 }

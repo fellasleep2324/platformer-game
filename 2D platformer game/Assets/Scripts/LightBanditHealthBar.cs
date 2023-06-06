@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LightBanditHealthBar : MonoBehaviour
 {
     public Animator animator;
-    public int maxHealth = 2;
+    public int maxHealth;
     public int currentHealth;
 
     public HealthBar healthBar;
