@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeavyBanditHealthBar : MonoBehaviour
+public class MushroomHP : MonoBehaviour
 {
     public Animator animator;
-    public int maxHealth = 6;
+    public int maxHealth = 4;
     public int currentHealth;
 
     public HealthBar healthBar;
