@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -612,7 +612,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81364908}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.57, y: -0.98, z: -2.7366574}
+  m_LocalPosition: {x: -1.35, y: -0.98, z: -2.7366574}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6914,7 +6914,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941426859}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.01, y: -0.99, z: -2.7366574}
+  m_LocalPosition: {x: 3.71, y: -0.99, z: -2.7366574}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8170,9 +8170,9 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -2.0000005, y: -0.00016000011}
-  - {x: -0.7965204, y: -0.004381745}
-  - {x: -0.78098935, y: -0.004436224}
+  - {x: -2.0000005, y: -0.00016000039}
+  - {x: -0.20917146, y: -0.004381745}
+  - {x: -0.18606062, y: -0.004436224}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -8202,7 +8202,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: -0.78098875, y: -0.004276225, z: 0}
+    - position: {x: -0.18606015, y: -0.004276225, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -8284,8 +8284,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: -1.3904943, y: -0.0021381155, z: 0}
-    m_Extent: {x: 0.6097863, y: 0.082137614, z: 0}
+    m_Center: {x: -1.0930301, y: -0.0021381155, z: 0}
+    m_Extent: {x: 0.9071585, y: 0.08213789, z: 0}
 --- !u!1 &1156441067
 GameObject:
   m_ObjectHideFlags: 0
