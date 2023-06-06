@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float KBcounter; 
     public float Totaltime; 
     public Rigidbody2D playerRb;
+    public playerHealth1 health1;
 
     public bool KnockfromRight; 
 
@@ -29,14 +30,9 @@ public class PlayerMovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
    
-    // Start is called before the first frame update
-    void Start()
-    {
- 
-    }
-
-    // Update is called once per frame
     void Update()
+{
+    
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
@@ -47,10 +43,9 @@ animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
             jump = true;
             animator.SetBool("IsJumping", true);
         }
-      
-    
-
     }
+    
+ }
     void FixedUpdate()
 
     {
@@ -76,6 +71,7 @@ animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
       
         
     }
+ 
 
     
 }
