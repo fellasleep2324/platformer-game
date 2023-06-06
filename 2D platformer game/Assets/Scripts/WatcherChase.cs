@@ -35,7 +35,7 @@ void Update()
     if(isChasing)
     {
         transform.position = Vector2.MoveTowards(transform.position, Target.position, moveSpeed*Time.deltaTime);
-        if(Target.position.x < attackRange)
+        if(Vector2.Distance (transform.position,Target.position) > attackRange )
         {
             animator.SetTrigger("Attack");
             if(animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
