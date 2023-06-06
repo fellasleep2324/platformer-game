@@ -31,21 +31,9 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
-
-        
-
      void Attack()
     {
-        
-       /* if(animator.IsJumping && !Attack2)
-        {
-            animator.SetTrigger("Attack2");
-        }
-    */
-
         animator.SetTrigger("Attack1");
-        
-
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
         foreach(Collider2D enemy in hitEnemies)

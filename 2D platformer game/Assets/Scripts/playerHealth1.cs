@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerHealth1 : MonoBehaviour
 {
     public Animator animator;
     public int maxHealth = 5;
-    int currentHealth;
+    public int currentHealth;
 
     public HealthBar healthBar;
     void Start()
@@ -23,7 +24,7 @@ public class playerHealth1 : MonoBehaviour
 
         animator.SetTrigger("Ouch");
 
-        if (currentHealth <= 0)
+        if(currentHealth <= 0)
         {
             Die();
         }

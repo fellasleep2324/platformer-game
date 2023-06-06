@@ -15,7 +15,6 @@ public class LightBanditHealthBar : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
-
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -31,10 +30,10 @@ public class LightBanditHealthBar : MonoBehaviour
     }
 
     void Die()
-        {
-            animator.SetBool("IsDie", true);
+    {
+        animator.SetBool("IsDie", true);
 
-            GetComponent<Collider2D>().enabled = false;
-            this.enabled = false;
-        }
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
+    }
 }
