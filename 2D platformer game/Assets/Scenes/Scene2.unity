@@ -7077,6 +7077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4d7e67f15d16d4e8ce446eb696be45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   maxHealth: 3
   currentHealth: 0
   healthBar: {fileID: 815008125}
@@ -7405,6 +7406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4d7e67f15d16d4e8ce446eb696be45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   maxHealth: 3
   currentHealth: 0
   healthBar: {fileID: 1342291471}
