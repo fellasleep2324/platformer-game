@@ -19,6 +19,8 @@ void Start()
 
     // Update is called once per frame
 void Update()
+
+    
     {
         if(Target.position.y > Begin.position.y)
         {
@@ -40,7 +42,7 @@ void Update()
     }
         if(Target.position.x > Slow.position.x)
         {
-            moveSpeed = moveSpeed/2;
+            isChasing = false;
         }
     }
 }
