@@ -12,6 +12,11 @@ public Transform Begin;
 public float attackRange;
 public Transform Slow;
 
+public float attackRanger = 0.5f;
+public Transform attackPoint;
+public LayerMask playerLayers;
+public int attackDamage = 10;
+
 void Start() 
 {
  isChasing = false;    
@@ -35,8 +40,31 @@ void Update()
             animator.SetTrigger("Attack");
             if(animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
             {
-                //cause lethal damage
-            }
+                    Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRanger, playerLayers);
+
+                    foreach (Collider2D player in hitPlayer)
+                    {
+                        Debug.Assert(player != null, player);
+
+
+
+                        playerHealth1 playerHealth = player.GetComponent<playerHealth1>();
+
+                        if (!playerHealth)
+
+                        {
+
+                            Debug.LogError("Collider does not have EnemyHealth component. " + player.name, player);
+
+
+                        }
+                        else
+                        {
+                            playerHealth.TakeDamage(attackDamage);
+                        }
+
+                    }
+                }
         }
 
     }
@@ -44,5 +72,11 @@ void Update()
         {
             isChasing = false;
         }
+    }
+    void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRanger);
     }
 }
